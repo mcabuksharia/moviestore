@@ -1,0 +1,2 @@
+class Car < Viehcle
+end	

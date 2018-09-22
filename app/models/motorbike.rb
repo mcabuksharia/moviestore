@@ -1,0 +1,2 @@
+class Motorbike < Viehcle
+end

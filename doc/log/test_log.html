@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>test.log - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../README_rdoc.html">README</a>
+  
+    <li><a href="../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../app/assets/javascripts/events_coffee.html">events.coffee</a>
+  
+    <li><a href="../app/assets/javascripts/movies_coffee.html">movies.coffee</a>
+  
+    <li><a href="../app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li><a href="../app/assets/stylesheets/events_scss.html">events.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../app/controllers/events_controller_rb~.html">events_controller.rb~</a>
+  
+    <li><a href="../app/views/events/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../app/views/events/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../app/views/movies/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../app/views/movies/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../config_ru.html">config.ru</a>
+  
+    <li><a href="../log/development_log.html">development.log</a>
+  
+    <li><a href="../log/test_log.html">test.log</a>
+  
+    <li><a href="../public/404_html.html">404.html</a>
+  
+    <li><a href="../public/422_html.html">422.html</a>
+  
+    <li><a href="../public/500_html.html">500.html</a>
+  
+    <li><a href="../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../public/robots_txt.html">robots</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page log/test.log">
+
+<pre>[1m[36m (102.6ms)[0m  [1mDROP DATABASE IF EXISTS `moviestore_test`[0m
+[1m[35m (17.4ms)[0m  CREATE DATABASE `moviestore_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+[1m[36m (123.9ms)[0m  [1mCREATE TABLE `events` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `price` decimal(10), `starts_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `end_date` datetime) ENGINE=InnoDB[0m
+[1m[35m (77.8ms)[0m  CREATE TABLE `movies` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255), `release_year` int(11), `price` float(24), `description` text, `imdb_id` varchar(255), `poster_url` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+[1m[36m (61.8ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+[1m[35m (210.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+[1m[36m (0.4ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+[1m[35m (32.7ms)[0m  INSERT INTO `schema_migrations` (version) VALUES (&#39;20180707042458&#39;)
+[1m[36m (33.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES (&#39;20160118073315&#39;)[0m
+[1m[35m (33.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES (&#39;20160120143205&#39;)
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-19 23:34:24 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.4ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.3ms)</pre>
+
+<p>Completed 200 OK in 689ms (Views: 655.8ms | ActiveRecord: 1.7ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-19 23:34:25 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (99.2ms)
+Rendered events/new.html.erb within layouts/application (105.8ms)</pre>
+
+<p>Completed 200 OK in 125ms (Views: 112.4ms | ActiveRecord: 0.4ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-19 23:35:09 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.3ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (3.9ms)</pre>
+
+<p>Completed 200 OK in 451ms (Views: 418.9ms | ActiveRecord: 1.5ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-19 23:35:09 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (48.5ms)
+Rendered events/new.html.erb within layouts/application (54.6ms)</pre>
+
+<p>Completed 200 OK in 70ms (Views: 58.4ms | ActiveRecord: 0.3ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.3ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-19 23:35:44 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.3ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (3.9ms)</pre>
+
+<p>Completed 200 OK in 409ms (Views: 376.8ms | ActiveRecord: 1.5ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-19 23:35:44 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (46.7ms)
+Rendered events/new.html.erb within layouts/application (52.7ms)</pre>
+
+<p>Completed 200 OK in 69ms (Views: 56.3ms | ActiveRecord: 0.4ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-19 23:36:25 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.2ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (3.9ms)</pre>
+
+<p>Completed 200 OK in 410ms (Views: 376.4ms | ActiveRecord: 1.5ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-19 23:36:25 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (47.5ms)
+Rendered events/new.html.erb within layouts/application (53.5ms)</pre>
+
+<p>Completed 200 OK in 69ms (Views: 57.0ms | ActiveRecord: 0.4ms) Started POST
+“/events” for 127.0.0.1 at 2018-07-19 23:36:26 +0530 Processing by <a
+href="../EventsController.html#method-i-create">EventsController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;event&quot;=&gt;{&quot;name&quot;=&gt;&quot;Testing rspec&quot;, &quot;description&quot;=&gt;&quot;Hello rspec description&quot;, &quot;price&quot;=&gt;&quot;23&quot;, &quot;starts_at(1i)&quot;=&gt;&quot;2018&quot;, &quot;starts_at(2i)&quot;=&gt;&quot;7&quot;, &quot;starts_at(3i)&quot;=&gt;&quot;19&quot;, &quot;starts_at(4i)&quot;=&gt;&quot;18&quot;, &quot;starts_at(5i)&quot;=&gt;&quot;06&quot;, &quot;end_date(1i)&quot;=&gt;&quot;2018&quot;, &quot;end_date(2i)&quot;=&gt;&quot;7&quot;, &quot;end_date(3i)&quot;=&gt;&quot;19&quot;, &quot;end_date(4i)&quot;=&gt;&quot;18&quot;, &quot;end_date(5i)&quot;=&gt;&quot;06&quot;}, &quot;commit&quot;=&gt;&quot;Create Event&quot;}
+[1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+[1m[36m (9.8ms)[0m  [1mSELECT `events`.`id`, `events`.`starts_at`, `events`.`end_date` FROM `events` WHERE (end_date &gt;= &#39;2018-07-19 18:06:26 UTC&#39;)[0m
+[1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Rendered events/_form.html.erb (57.9ms)
+Rendered events/new.html.erb within layouts/application (58.7ms)</pre>
+
+<p>Completed 200 OK in 85ms (Views: 65.3ms | ActiveRecord: 10.3ms)</p>
+
+<pre>[1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-19 23:39:03 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.3ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.1ms)</pre>
+
+<p>Completed 200 OK in 418ms (Views: 385.4ms | ActiveRecord: 1.5ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-19 23:39:03 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (48.0ms)
+Rendered events/new.html.erb within layouts/application (53.9ms)</pre>
+
+<p>Completed 200 OK in 70ms (Views: 57.4ms | ActiveRecord: 0.4ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-19 23:46:58 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.3ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.1ms)</pre>
+
+<p>Completed 200 OK in 456ms (Views: 422.3ms | ActiveRecord: 1.5ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-19 23:46:58 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (49.4ms)
+Rendered events/new.html.erb within layouts/application (55.3ms)</pre>
+
+<p>Completed 200 OK in 72ms (Views: 59.1ms | ActiveRecord: 0.3ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-19 23:47:38 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.3ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (3.9ms)</pre>
+
+<p>Completed 200 OK in 409ms (Views: 376.6ms | ActiveRecord: 1.5ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-19 23:47:39 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (47.3ms)
+Rendered events/new.html.erb within layouts/application (53.4ms)</pre>
+
+<p>Completed 200 OK in 70ms (Views: 57.0ms | ActiveRecord: 0.4ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-19 23:58:20 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.3ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.1ms)</pre>
+
+<p>Completed 200 OK in 456ms (Views: 422.4ms | ActiveRecord: 1.5ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-19 23:58:20 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (47.4ms)
+Rendered events/new.html.erb within layouts/application (53.7ms)</pre>
+
+<p>Completed 200 OK in 70ms (Views: 58.2ms | ActiveRecord: 0.4ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-19 23:59:52 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.3ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.0ms)</pre>
+
+<p>Completed 200 OK in 449ms (Views: 417.7ms | ActiveRecord: 1.5ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-19 23:59:53 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (48.3ms)
+Rendered events/new.html.erb within layouts/application (54.4ms)</pre>
+
+<p>Completed 200 OK in 70ms (Views: 58.2ms | ActiveRecord: 0.3ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-20 00:00:24 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.3ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.6ms)</pre>
+
+<p>Completed 200 OK in 452ms (Views: 420.5ms | ActiveRecord: 1.5ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-20 00:00:24 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (48.2ms)
+Rendered events/new.html.erb within layouts/application (54.1ms)</pre>
+
+<p>Completed 200 OK in 70ms (Views: 57.7ms | ActiveRecord: 0.4ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.8ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-20 00:01:31 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.3ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.8ms)</pre>
+
+<p>Completed 200 OK in 408ms (Views: 376.5ms | ActiveRecord: 1.5ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-20 00:01:31 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (48.5ms)
+Rendered events/new.html.erb within layouts/application (54.6ms)</pre>
+
+<p>Completed 200 OK in 70ms (Views: 58.0ms | ActiveRecord: 0.4ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-20 00:02:15 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.3ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.8ms)</pre>
+
+<p>Completed 200 OK in 456ms (Views: 422.6ms | ActiveRecord: 1.5ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-20 00:02:15 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (48.9ms)
+Rendered events/new.html.erb within layouts/application (54.8ms)</pre>
+
+<p>Completed 200 OK in 70ms (Views: 58.4ms | ActiveRecord: 0.4ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.3ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-20 00:03:54 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.2ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.0ms)</pre>
+
+<p>Completed 200 OK in 410ms (Views: 378.0ms | ActiveRecord: 1.5ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-20 00:03:55 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (48.1ms)
+Rendered events/new.html.erb within layouts/application (54.1ms)</pre>
+
+<p>Completed 200 OK in 69ms (Views: 57.6ms | ActiveRecord: 0.4ms)</p>
+
+<pre>[1m[35m (0.7ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-20 00:11:32 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.2ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.0ms)</pre>
+
+<p>Completed 200 OK in 483ms (Views: 448.3ms | ActiveRecord: 1.5ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-20 00:11:32 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (51.0ms)
+Rendered events/new.html.erb within layouts/application (57.2ms)</pre>
+
+<p>Completed 200 OK in 75ms (Views: 61.5ms | ActiveRecord: 0.3ms)</p>
+
+<pre>[1m[35m (0.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (57.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-22 20:01:16 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.4ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.5ms)</pre>
+
+<p>Completed 200 OK in 665ms (Views: 616.0ms | ActiveRecord: 1.7ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-22 20:01:17 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (221.3ms)
+Rendered events/new.html.erb within layouts/application (237.7ms)</pre>
+
+<p>Completed 200 OK in 270ms (Views: 258.2ms | ActiveRecord: 0.4ms) Started
+POST “/events” for 127.0.0.1 at 2018-07-22 20:01:17 +0530 Processing by <a
+href="../EventsController.html#method-i-create">EventsController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;event&quot;=&gt;{&quot;name&quot;=&gt;&quot;Testing rspec&quot;, &quot;description&quot;=&gt;&quot;Hello rspec description&quot;, &quot;price&quot;=&gt;&quot;23&quot;}, &quot;commit&quot;=&gt;&quot;Create Event&quot;}
+[1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+[1m[36m (16.1ms)[0m  [1mSELECT `events`.`id`, `events`.`starts_at`, `events`.`end_date` FROM `events` WHERE (end_date &gt;= &#39;2018-07-22 14:31:17 UTC&#39;)[0m
+[1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1</pre>
+
+<p>Completed 500 Internal Server Error in 27ms (ActiveRecord: 16.6ms)</p>
+
+<pre>[1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-22 20:02:19 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.2ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.0ms)</pre>
+
+<p>Completed 200 OK in 451ms (Views: 419.6ms | ActiveRecord: 1.6ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-22 20:02:19 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (47.4ms)
+Rendered events/new.html.erb within layouts/application (53.3ms)</pre>
+
+<p>Completed 200 OK in 70ms (Views: 57.9ms | ActiveRecord: 0.4ms) Started POST
+“/events” for 127.0.0.1 at 2018-07-22 20:02:20 +0530 Processing by <a
+href="../EventsController.html#method-i-create">EventsController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;event&quot;=&gt;{&quot;name&quot;=&gt;&quot;Testing rspec&quot;, &quot;description&quot;=&gt;&quot;Hello rspec description&quot;, &quot;price&quot;=&gt;&quot;23&quot;}, &quot;commit&quot;=&gt;&quot;Create Event&quot;}
+[1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `events` (`name`, `description`, `price`, `created_at`, `updated_at`) VALUES (&#39;Testing rspec&#39;, &#39;Hello rspec description&#39;, 23, &#39;2018-07-22 14:32:20&#39;, &#39;2018-07-22 14:32:20&#39;)[0m
+[1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a
+href="http://www.example.com/events/1">www.example.com/events/1</a>
+Completed 302 Found in 11ms (ActiveRecord: 1.0ms) Started GET “/events/1”
+for 127.0.0.1 at 2018-07-22 20:02:20 +0530 Processing by <a
+href="../EventsController.html#method-i-show">EventsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;1&quot;}
+[1m[36mEvent Load (0.5ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+Rendered events/show.html.erb within layouts/application (3.9ms)</pre>
+
+<p>Completed 200 OK in 110ms (Views: 24.3ms | ActiveRecord: 0.5ms)</p>
+
+<pre>[1m[35m (48.2ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-22 20:04:36 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.6ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.4ms)</pre>
+
+<p>Completed 200 OK in 410ms (Views: 379.0ms | ActiveRecord: 1.8ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-22 20:04:37 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (48.1ms)
+Rendered events/new.html.erb within layouts/application (54.1ms)</pre>
+
+<p>Completed 200 OK in 69ms (Views: 57.6ms | ActiveRecord: 0.4ms) Started POST
+“/events” for 127.0.0.1 at 2018-07-22 20:04:37 +0530 Processing by <a
+href="../EventsController.html#method-i-create">EventsController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;event&quot;=&gt;{&quot;name&quot;=&gt;&quot;Testing rspec&quot;, &quot;description&quot;=&gt;&quot;Hello rspec description&quot;, &quot;price&quot;=&gt;&quot;23&quot;}, &quot;commit&quot;=&gt;&quot;Create Event&quot;}
+[1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `events` (`name`, `description`, `price`, `created_at`, `updated_at`) VALUES (&#39;Testing rspec&#39;, &#39;Hello rspec description&#39;, 23, &#39;2018-07-22 14:34:37&#39;, &#39;2018-07-22 14:34:37&#39;)[0m
+[1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a
+href="http://www.example.com/events/2">www.example.com/events/2</a>
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms) Started GET “/events/2”
+for 127.0.0.1 at 2018-07-22 20:04:37 +0530 Processing by <a
+href="../EventsController.html#method-i-show">EventsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;2&quot;}
+[1m[36mEvent Load (0.5ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 2 LIMIT 1[0m
+Rendered events/show.html.erb within layouts/application (3.2ms)</pre>
+
+<p>Completed 200 OK in 47ms (Views: 25.3ms | ActiveRecord: 0.5ms)</p>
+
+<pre>[1m[35m (37.3ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.3ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-22 20:04:46 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.5ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.0ms)</pre>
+
+<p>Completed 200 OK in 409ms (Views: 376.7ms | ActiveRecord: 1.8ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-22 20:04:47 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (48.0ms)
+Rendered events/new.html.erb within layouts/application (53.9ms)</pre>
+
+<p>Completed 200 OK in 69ms (Views: 57.4ms | ActiveRecord: 0.4ms) Started POST
+“/events” for 127.0.0.1 at 2018-07-22 20:04:47 +0530 Processing by <a
+href="../EventsController.html#method-i-create">EventsController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;event&quot;=&gt;{&quot;name&quot;=&gt;&quot;Testing rspec&quot;, &quot;description&quot;=&gt;&quot;Hello rspec description&quot;, &quot;price&quot;=&gt;&quot;23&quot;}, &quot;commit&quot;=&gt;&quot;Create Event&quot;}
+[1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `events` (`name`, `description`, `price`, `created_at`, `updated_at`) VALUES (&#39;Testing rspec&#39;, &#39;Hello rspec description&#39;, 23, &#39;2018-07-22 14:34:47&#39;, &#39;2018-07-22 14:34:47&#39;)[0m
+[1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a
+href="http://www.example.com/events/3">www.example.com/events/3</a>
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms) Started GET “/events/3”
+for 127.0.0.1 at 2018-07-22 20:04:47 +0530 Processing by <a
+href="../EventsController.html#method-i-show">EventsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;3&quot;}
+[1m[36mEvent Load (0.5ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 3 LIMIT 1[0m
+Rendered events/show.html.erb within layouts/application (2.8ms)</pre>
+
+<p>Completed 200 OK in 33ms (Views: 12.0ms | ActiveRecord: 0.5ms)</p>
+
+<pre>[1m[35m (38.1ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.3ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-22 20:06:21 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.4ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.0ms)</pre>
+
+<p>Completed 200 OK in 411ms (Views: 378.6ms | ActiveRecord: 1.7ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-22 20:06:21 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (47.0ms)
+Rendered events/new.html.erb within layouts/application (53.4ms)</pre>
+
+<p>Completed 200 OK in 70ms (Views: 57.0ms | ActiveRecord: 0.4ms) Started POST
+“/events” for 127.0.0.1 at 2018-07-22 20:06:21 +0530 Processing by <a
+href="../EventsController.html#method-i-create">EventsController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;event&quot;=&gt;{&quot;name&quot;=&gt;&quot;Testing rspec&quot;, &quot;description&quot;=&gt;&quot;Hello rspec description&quot;, &quot;price&quot;=&gt;&quot;23&quot;}, &quot;commit&quot;=&gt;&quot;Create Event&quot;}
+[1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `events` (`name`, `description`, `price`, `created_at`, `updated_at`) VALUES (&#39;Testing rspec&#39;, &#39;Hello rspec description&#39;, 23, &#39;2018-07-22 14:36:21&#39;, &#39;2018-07-22 14:36:21&#39;)[0m
+[1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a
+href="http://www.example.com/events/4">www.example.com/events/4</a>
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms) Started GET “/events/4”
+for 127.0.0.1 at 2018-07-22 20:06:21 +0530 Processing by <a
+href="../EventsController.html#method-i-show">EventsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;4&quot;}
+[1m[36mEvent Load (0.5ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 4 LIMIT 1[0m
+Rendered events/show.html.erb within layouts/application (3.2ms)</pre>
+
+<p>Completed 200 OK in 33ms (Views: 11.9ms | ActiveRecord: 0.5ms)</p>
+
+<pre>[1m[35m (45.4ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-22 20:07:46 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.4ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.1ms)</pre>
+
+<p>Completed 200 OK in 414ms (Views: 381.7ms | ActiveRecord: 1.8ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-22 20:07:46 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (46.6ms)
+Rendered events/new.html.erb within layouts/application (52.8ms)</pre>
+
+<p>Completed 200 OK in 69ms (Views: 56.4ms | ActiveRecord: 0.4ms) Started POST
+“/events” for 127.0.0.1 at 2018-07-22 20:07:46 +0530 Processing by <a
+href="../EventsController.html#method-i-create">EventsController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;event&quot;=&gt;{&quot;name&quot;=&gt;&quot;Testing rspec&quot;, &quot;description&quot;=&gt;&quot;Hello rspec description&quot;, &quot;price&quot;=&gt;&quot;23&quot;}, &quot;commit&quot;=&gt;&quot;Create Event&quot;}
+[1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `events` (`name`, `description`, `price`, `created_at`, `updated_at`) VALUES (&#39;Testing rspec&#39;, &#39;Hello rspec description&#39;, 23, &#39;2018-07-22 14:37:46&#39;, &#39;2018-07-22 14:37:46&#39;)[0m
+[1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a
+href="http://www.example.com/events/5">www.example.com/events/5</a>
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms) Started GET “/events/5”
+for 127.0.0.1 at 2018-07-22 20:07:46 +0530 Processing by <a
+href="../EventsController.html#method-i-show">EventsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;5&quot;}
+[1m[36mEvent Load (0.5ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 5 LIMIT 1[0m
+Rendered events/show.html.erb within layouts/application (3.0ms)</pre>
+
+<p>Completed 200 OK in 45ms (Views: 25.3ms | ActiveRecord: 0.5ms)</p>
+
+<pre>[1m[35m (48.8ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (3.0ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-22 20:08:27 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.4ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.3ms)</pre>
+
+<p>Completed 200 OK in 452ms (Views: 418.6ms | ActiveRecord: 1.9ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-22 20:08:28 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (55.4ms)
+Rendered events/new.html.erb within layouts/application (62.1ms)</pre>
+
+<p>Completed 200 OK in 80ms (Views: 66.0ms | ActiveRecord: 0.4ms) Started POST
+“/events” for 127.0.0.1 at 2018-07-22 20:08:28 +0530 Processing by <a
+href="../EventsController.html#method-i-create">EventsController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;event&quot;=&gt;{&quot;name&quot;=&gt;&quot;Testing rspec&quot;, &quot;description&quot;=&gt;&quot;Hello rspec description&quot;, &quot;price&quot;=&gt;&quot;23&quot;}, &quot;commit&quot;=&gt;&quot;Create Event&quot;}
+[1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `events` (`name`, `description`, `price`, `created_at`, `updated_at`) VALUES (&#39;Testing rspec&#39;, &#39;Hello rspec description&#39;, 23, &#39;2018-07-22 14:38:28&#39;, &#39;2018-07-22 14:38:28&#39;)[0m
+[1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a
+href="http://www.example.com/events/6">www.example.com/events/6</a>
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms) Started GET “/events/6”
+for 127.0.0.1 at 2018-07-22 20:08:28 +0530 Processing by <a
+href="../EventsController.html#method-i-show">EventsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;6&quot;}
+[1m[36mEvent Load (0.5ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 6 LIMIT 1[0m
+Rendered events/show.html.erb within layouts/application (3.1ms)</pre>
+
+<p>Completed 200 OK in 54ms (Views: 32.2ms | ActiveRecord: 0.5ms)</p>
+
+<pre>[1m[35m (36.8ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-22 20:09:11 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.5ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.3ms)</pre>
+
+<p>Completed 200 OK in 456ms (Views: 417.0ms | ActiveRecord: 2.0ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-22 20:09:12 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (51.6ms)
+Rendered events/new.html.erb within layouts/application (59.9ms)</pre>
+
+<p>Completed 200 OK in 79ms (Views: 64.0ms | ActiveRecord: 0.4ms) Started POST
+“/events” for 127.0.0.1 at 2018-07-22 20:09:12 +0530 Processing by <a
+href="../EventsController.html#method-i-create">EventsController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;event&quot;=&gt;{&quot;name&quot;=&gt;&quot;Testing rspec&quot;, &quot;description&quot;=&gt;&quot;Hello rspec description&quot;, &quot;price&quot;=&gt;&quot;23&quot;}, &quot;commit&quot;=&gt;&quot;Create Event&quot;}
+[1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `events` (`name`, `description`, `price`, `created_at`, `updated_at`) VALUES (&#39;Testing rspec&#39;, &#39;Hello rspec description&#39;, 23, &#39;2018-07-22 14:39:12&#39;, &#39;2018-07-22 14:39:12&#39;)[0m
+[1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a
+href="http://www.example.com/events/7">www.example.com/events/7</a>
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms) Started GET “/events/7”
+for 127.0.0.1 at 2018-07-22 20:09:12 +0530 Processing by <a
+href="../EventsController.html#method-i-show">EventsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;7&quot;}
+[1m[36mEvent Load (0.5ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 7 LIMIT 1[0m
+Rendered events/show.html.erb within layouts/application (3.2ms)</pre>
+
+<p>Completed 200 OK in 52ms (Views: 24.9ms | ActiveRecord: 0.5ms)</p>
+
+<pre>[1m[35m (46.0ms)[0m  ROLLBACK
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+[1m[35m (0.2ms)[0m  BEGIN</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-07-22 20:24:46 +0530 Processing by <a
+href="../EventsController.html#method-i-index">EventsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mEvent Load (0.5ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+Rendered events/index.html.erb within layouts/application (4.2ms)</pre>
+
+<p>Completed 200 OK in 417ms (Views: 383.1ms | ActiveRecord: 1.9ms) Started
+GET “/events/new” for 127.0.0.1 at 2018-07-22 20:24:46 +0530 Processing by
+<a href="../EventsController.html#method-i-new">EventsController#new</a> as
+HTML</p>
+
+<pre>Rendered events/_form.html.erb (46.9ms)
+Rendered events/new.html.erb within layouts/application (53.1ms)</pre>
+
+<p>Completed 200 OK in 69ms (Views: 56.6ms | ActiveRecord: 0.4ms) Started POST
+“/events” for 127.0.0.1 at 2018-07-22 20:24:46 +0530 Processing by <a
+href="../EventsController.html#method-i-create">EventsController#create</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;event&quot;=&gt;{&quot;name&quot;=&gt;&quot;Testing rspec&quot;, &quot;description&quot;=&gt;&quot;Hello rspec description&quot;, &quot;price&quot;=&gt;&quot;23&quot;}, &quot;commit&quot;=&gt;&quot;Create Event&quot;}
+[1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+[1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `events` (`name`, `description`, `price`, `created_at`, `updated_at`) VALUES (&#39;Testing rspec&#39;, &#39;Hello rspec description&#39;, 23, &#39;2018-07-22 14:54:46&#39;, &#39;2018-07-22 14:54:46&#39;)[0m
+[1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1</pre>
+
+<p>Redirected to <a
+href="http://www.example.com/events/8">www.example.com/events/8</a>
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms) Started GET “/events/8”
+for 127.0.0.1 at 2018-07-22 20:24:46 +0530 Processing by <a
+href="../EventsController.html#method-i-show">EventsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;8&quot;}
+[1m[36mEvent Load (0.5ms)[0m  [1mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 8 LIMIT 1[0m
+Rendered events/show.html.erb within layouts/application (4.6ms)</pre>
+
+<p>Completed 200 OK in 48ms (Views: 25.6ms | ActiveRecord: 0.5ms)</p>
+
+<pre>[1m[35m (33.5ms)[0m  ROLLBACK</pre>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

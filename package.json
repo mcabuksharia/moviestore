@@ -1,0 +1,31 @@
+{
+  "name": "moviestore",
+  "version": "1.0.0",
+  "description": "moviestore",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "dependencies": {
+    "cypress": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcabuksharia/moviestore.git"
+  },
+  "author": "atul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcabuksharia/moviestore/issues"
+  },
+  "homepage": "https://github.com/mcabuksharia/moviestore#readme"
+  ,
+  "scripts": {
+    "cypress:open": "cypress open"
+  }
+}

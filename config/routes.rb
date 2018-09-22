@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
+  resources :articles
+  resources :categories
+  resources :tags
+  resources :guests
+  resources :comments
   resources :events
   resources :movies
   # The priority is based upon order of creation: first created -> highest priority.
